@@ -5,7 +5,11 @@ ULIS AI is a Structured Legal Intelligence Engine for legal awareness, research 
 This repository is a demo/prototype. It is designed for people who need the law explained clearly, including non-technical users, families, legal aid groups, researchers, and legal teams.
 
 > Disclaimer: ULIS AI provides structured legal research support and legal-awareness summaries only. It is not legal advice and does not replace a qualified lawyer, court, legal aid clinic, or independent legal judgment.
+
+## Product Demo Video 
+
 https://drive.google.com/file/d/1RcKo0Hac4Bphm6iMIpJ5UYSvMxdzkOxn/view?usp=drive_link
+
 ## What ULIS AI Does
 
 - **Research intake:** users can describe a situation in plain language, use voice input, choose a role and jurisdiction, and start from saved legal examples.
