@@ -1,6 +1,6 @@
 # ULIS AI
 
-ULIS AI is a Structured Legal Intelligence Engine for legal awareness, research preparation, and privacy-aware case analysis. It helps users describe a legal situation, compare it with a structured case corpus, understand relevant law sections, identify evidence gaps, and generate a simple preparation brief.
+ULIS AI is a Structured Legal Intelligence Engine for legal awareness, research preparation, and privacy-aware case analysis. It helps users describe a legal situation, compare it with a structured case corpus, understand relevant law sections, identify evidence gaps, and generate a simple preparation brief with MultiLingual Voice and Text Support .
 
 This repository is a demo/prototype. It is designed for people who need the law explained clearly, including non-technical users, families, legal aid groups, researchers, and legal teams.
 
@@ -15,6 +15,7 @@ This repository is a demo/prototype. It is designed for people who need the law 
 - **Law Map:** an interactive graph connects the user's issue to similar cases, law sections, evidence, and outcomes.
 - **Law Library:** a simple corpus view explains the stored legal examples and how documents become useful legal-awareness patterns.
 - **Brief:** a generated legal preparation brief can be reviewed and printed.
+- **Voice:** multi lingual voice setup for people living in india across different states with their own regional languages . 
 
 The current bundled corpus focuses on representative Indian dowry-related matters, including Section 498A IPC, the Dowry Prohibition Act, domestic violence, stridhan return, false allegation defense, settlement, and evidence readiness.
 
@@ -71,6 +72,7 @@ User input
   -> dashboard model
   -> graph model
   -> legal-awareness brief
+  -> multi-lingual voice setup 
 ```
 
 The app is intentionally session-scoped. The demo stores user input in browser session storage and does not persist sensitive facts to a backend service.
