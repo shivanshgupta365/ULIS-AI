@@ -1,0 +1,150 @@
+@import "tailwindcss";
+
+:root {
+  --background: #f6f8fb;
+  --foreground: #101318;
+  --muted: #5d6675;
+
+  --primary: #1959ff;
+  --primary-foreground: #ffffff;
+  --accent: #008f87;
+  --signal: #b5741f;
+  --danger: #be123c;
+  --success: #057a55;
+
+  --card: #ffffff;
+  --surface: #eef3f8;
+  --surface-2: #e5ebf4;
+  --card-border: rgba(17, 24, 39, 0.11);
+  --glow: rgba(25, 89, 255, 0.18);
+  --grid-line: rgba(16, 19, 24, 0.055);
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-muted: var(--muted);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-accent: var(--accent);
+  --color-signal: var(--signal);
+  --color-danger: var(--danger);
+  --color-success: var(--success);
+  --color-card: var(--card);
+  --color-surface: var(--surface);
+  --color-surface-2: var(--surface-2);
+  --color-card-border: var(--card-border);
+
+  --font-sans: "Geist", "Geist Fallback", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "Geist Mono", "Geist Mono Fallback", ui-monospace, monospace;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  color: var(--foreground);
+  font-family: var(--font-sans), system-ui, sans-serif;
+  background-color: var(--background);
+  background-image:
+    linear-gradient(var(--grid-line) 1px, transparent 1px),
+    linear-gradient(90deg, var(--grid-line) 1px, transparent 1px),
+    linear-gradient(135deg, rgba(25, 89, 255, 0.04), rgba(0, 143, 135, 0.035) 42%, rgba(181, 116, 31, 0.035));
+  background-size: 44px 44px, 44px 44px, 100% 100%;
+  background-attachment: fixed;
+  min-height: 100vh;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+::selection {
+  background: rgba(25, 89, 255, 0.18);
+  color: var(--foreground);
+}
+
+/* ---- Reusable design utilities ---- */
+@layer utilities {
+  .glass {
+    background: color-mix(in srgb, var(--card) 88%, transparent);
+    border: 1px solid var(--card-border);
+    backdrop-filter: blur(18px);
+  }
+
+  .glow-border {
+    box-shadow:
+      0 1px 2px rgba(16, 19, 24, 0.05),
+      0 18px 50px -34px var(--glow);
+  }
+
+  .text-gradient {
+    background: linear-gradient(100deg, var(--primary) 0%, var(--accent) 48%, var(--signal) 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+
+  .glow-text {
+    text-shadow: none;
+  }
+
+  .text-muted {
+    color: var(--muted);
+  }
+}
+
+/* ---- Print styles (Intelligence Brief to PDF) ---- */
+@media print {
+  body {
+    background: #ffffff !important;
+    background-image: none !important;
+    color: #111111 !important;
+  }
+  header,
+  footer,
+  .no-print {
+    display: none !important;
+  }
+  .report,
+  .report * {
+    color: #111111 !important;
+  }
+  .report {
+    background: #ffffff !important;
+    border: none !important;
+    box-shadow: none !important;
+    padding: 0 !important;
+  }
+  .report .border-card-border,
+  .report [class*="border-"] {
+    border-color: #dddddd !important;
+  }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(25, 89, 255, 0.22);
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(0, 143, 135, 0.32);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  ::before,
+  ::after {
+    scroll-behavior: auto !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}

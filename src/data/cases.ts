@@ -1,0 +1,311 @@
+import type { LegalCase } from "@/lib/types";
+
+/**
+ * 8 representative dowry-related cases used by the prototype.
+ * This is the single source of truth consumed by the relevance engine.
+ */
+export const CASES: LegalCase[] = [
+  {
+    id: "case_001",
+    title: "Continuous Dowry Demand Case",
+    court: "Delhi High Court",
+    year: "2023",
+    sections: ["498A IPC", "Dowry Prohibition Act"],
+    category: "Dowry Demand",
+    outcome: "Relief Granted",
+    summary:
+      "The court considered repeated monetary demands and written WhatsApp messages as relevant evidence establishing a continuing pattern of dowry harassment.",
+    winning_clues: [
+      "Repeated written demands for money strengthened the complainant's case",
+      "Witness statements from neighbours supported the timeline",
+      "Consistent dates across messages showed a continuing offence",
+    ],
+    risk_factors: [
+      "Lack of bank transaction proof for alleged payments",
+      "Some demands were only verbal with no corroboration",
+    ],
+    evidence: [
+      "WhatsApp messages",
+      "Witness statements",
+      "Bank transfer requests",
+      "Timeline of incidents",
+    ],
+    keywords: [
+      "dowry demand",
+      "repeated demand",
+      "money",
+      "whatsapp",
+      "in-laws",
+      "harassment",
+      "written demand",
+      "continuing offence",
+    ],
+  },
+  {
+    id: "case_002",
+    title: "Mental Cruelty Due to Dowry",
+    court: "Bombay High Court",
+    year: "2022",
+    sections: ["498A IPC", "Protection of Women from Domestic Violence Act"],
+    category: "Mental Cruelty",
+    outcome: "Relief Granted",
+    summary:
+      "Sustained taunts and emotional abuse linked to non-payment of dowry were held to constitute mental cruelty under Section 498A.",
+    winning_clues: [
+      "Pattern of emotional abuse documented through diary entries and messages",
+      "Medical records of stress/anxiety treatment supported the claim",
+      "Specific incidents with dates were more persuasive than general claims",
+    ],
+    risk_factors: [
+      "Difficulty proving purely verbal mental harassment",
+      "Absence of independent witnesses to private incidents",
+    ],
+    evidence: [
+      "WhatsApp messages",
+      "Medical records",
+      "Witness statements",
+      "Timeline of incidents",
+    ],
+    keywords: [
+      "mental cruelty",
+      "harassment",
+      "taunts",
+      "emotional abuse",
+      "threats",
+      "dowry",
+      "anxiety",
+      "depression",
+      "in-laws",
+    ],
+  },
+  {
+    id: "case_003",
+    title: "Physical Harassment Linked to Dowry",
+    court: "Punjab & Haryana High Court",
+    year: "2021",
+    sections: ["498A IPC", "323 IPC", "Dowry Prohibition Act"],
+    category: "Physical Harassment",
+    outcome: "Conviction",
+    summary:
+      "Physical assault following dowry demands, supported by medical examination reports, led to conviction of the husband and in-laws.",
+    winning_clues: [
+      "Medical/MLC reports directly corroborated the injuries",
+      "Prompt FIR reduced doubts about fabrication",
+      "Photographs of injuries strengthened documentary evidence",
+    ],
+    risk_factors: [
+      "Delay between incident and medical examination weakens causation",
+      "Counter-allegations of self-infliction must be rebutted",
+    ],
+    evidence: [
+      "Medical records",
+      "Police complaint copy",
+      "Marriage photos",
+      "Witness statements",
+    ],
+    keywords: [
+      "physical harassment",
+      "assault",
+      "beating",
+      "violence",
+      "injury",
+      "medical",
+      "dowry",
+      "cruelty",
+      "fir",
+    ],
+  },
+  {
+    id: "case_004",
+    title: "Dowry Death Allegation",
+    court: "Supreme Court of India",
+    year: "2020",
+    sections: ["304B IPC", "498A IPC", "Dowry Prohibition Act"],
+    category: "Dowry Death",
+    outcome: "Conviction",
+    summary:
+      "Unnatural death within seven years of marriage, preceded by proven dowry harassment, attracted the presumption under Section 304B IPC.",
+    winning_clues: [
+      "Proof of cruelty 'soon before death' was decisive",
+      "Statements of the deceased's parents established demand pattern",
+      "Post-mortem report established unnatural death",
+    ],
+    risk_factors: [
+      "Presumption can be rebutted if cruelty link is not 'soon before death'",
+      "Gaps in the chain of circumstantial evidence",
+    ],
+    evidence: [
+      "Medical records",
+      "Police complaint copy",
+      "Witness statements",
+      "Timeline of incidents",
+    ],
+    keywords: [
+      "dowry death",
+      "304b",
+      "unnatural death",
+      "seven years",
+      "suicide",
+      "harassment",
+      "soon before death",
+      "presumption",
+    ],
+  },
+  {
+    id: "case_005",
+    title: "False Dowry Allegation Defense",
+    court: "Karnataka High Court",
+    year: "2023",
+    sections: ["498A IPC", "482 CrPC"],
+    category: "False Allegation Defense",
+    outcome: "Complaint Dismissed",
+    summary:
+      "Vague and omnibus allegations against the husband and relatives, without specific instances, led to quashing of the complaint.",
+    winning_clues: [
+      "General, non-specific allegations were held insufficient",
+      "Contradictions between FIR and later statements helped the defense",
+      "Absence of any documentary evidence weakened the complaint",
+    ],
+    risk_factors: [
+      "Quashing is harder where even one specific incident is proven",
+      "Counter-evidence from complainant can revive the case",
+    ],
+    evidence: [
+      "Police complaint copy",
+      "Legal notice",
+      "WhatsApp messages",
+      "Witness statements",
+    ],
+    keywords: [
+      "false allegation",
+      "falsely accused",
+      "vague allegations",
+      "omnibus",
+      "quash",
+      "482",
+      "defense",
+      "general allegations",
+      "contradiction",
+    ],
+  },
+  {
+    id: "case_006",
+    title: "Stridhan / Jewelry Return Case",
+    court: "Madras High Court",
+    year: "2022",
+    sections: ["406 IPC", "498A IPC"],
+    category: "Stridhan Return",
+    outcome: "Relief Granted",
+    summary:
+      "Wife's exclusive ownership of stridhan was upheld; retention of jewelry by in-laws amounted to criminal breach of trust under Section 406 IPC.",
+    winning_clues: [
+      "Purchase bills and wedding photographs proved ownership",
+      "Itemized list of jewelry strengthened the claim",
+      "Witnesses to the handover of jewelry corroborated the account",
+    ],
+    risk_factors: [
+      "Without bills or photos, ownership is harder to establish",
+      "Claims of jointly used household items may be contested",
+    ],
+    evidence: [
+      "Gift/jewelry bills",
+      "Marriage photos",
+      "Witness statements",
+      "Timeline of incidents",
+    ],
+    keywords: [
+      "stridhan",
+      "jewelry",
+      "jewellery",
+      "gold",
+      "return",
+      "406",
+      "breach of trust",
+      "gifts",
+      "ownership",
+      "bills",
+    ],
+  },
+  {
+    id: "case_007",
+    title: "Domestic Violence with Dowry Demand",
+    court: "Allahabad High Court",
+    year: "2021",
+    sections: [
+      "Protection of Women from Domestic Violence Act",
+      "498A IPC",
+      "Dowry Prohibition Act",
+    ],
+    category: "Domestic Violence",
+    outcome: "Relief Granted",
+    summary:
+      "Protection and residence orders were granted under the DV Act where dowry demands coincided with physical and economic abuse.",
+    winning_clues: [
+      "Domestic Incident Report (DIR) documented the abuse pattern",
+      "Economic abuse (withholding money) was recognised as domestic violence",
+      "Right to residence in the shared household was upheld",
+    ],
+    risk_factors: [
+      "Need to show a 'domestic relationship' and shared household",
+      "Interim relief may lapse without follow-up evidence",
+    ],
+    evidence: [
+      "Medical records",
+      "WhatsApp messages",
+      "Witness statements",
+      "Bank transfers",
+    ],
+    keywords: [
+      "domestic violence",
+      "dv act",
+      "protection order",
+      "residence",
+      "economic abuse",
+      "physical abuse",
+      "dowry",
+      "shared household",
+    ],
+  },
+  {
+    id: "case_008",
+    title: "Settlement and Mediation Case",
+    court: "Delhi Mediation Centre",
+    year: "2023",
+    sections: ["498A IPC", "Dowry Prohibition Act"],
+    category: "Settlement",
+    outcome: "Settlement",
+    summary:
+      "Parties resolved a dowry harassment dispute through court-referred mediation, agreeing on stridhan return and mutual withdrawal of cases.",
+    winning_clues: [
+      "Clear written settlement terms prevented later disputes",
+      "Return of stridhan was documented with receipts",
+      "Mutual quashing was sought jointly to give effect to settlement",
+    ],
+    risk_factors: [
+      "Settlements can collapse if terms are vague or unrecorded",
+      "Non-compoundable aspects may limit full closure",
+    ],
+    evidence: [
+      "Legal notice",
+      "Gift/jewelry bills",
+      "Timeline of incidents",
+      "Witness statements",
+    ],
+    keywords: [
+      "settlement",
+      "mediation",
+      "compromise",
+      "mutual",
+      "withdraw",
+      "quash",
+      "stridhan return",
+      "resolution",
+      "agreement",
+    ],
+  },
+];
+
+/** Quick lookup by id. */
+export const CASE_BY_ID: Record<string, LegalCase> = Object.fromEntries(
+  CASES.map((c) => [c.id, c]),
+);
