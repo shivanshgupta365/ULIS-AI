@@ -106,48 +106,6 @@ The goal is not to predict outcomes. The goal is to show why a stored legal exam
 - Framer Motion
 - Lucide React icons
 
-## Local Setup
-
-```bash
-npm install
-npm run dev
-```
-
-Open [http://localhost:3000](http://localhost:3000).
-
-## Scripts
-
-```bash
-npm run dev      # Start local development server
-npm run build    # Build production output
-npm run start    # Start production server after build
-npm run lint     # Run ESLint
-```
-
-## Verification
-
-The public release was prepared with:
-
-```bash
-npm run lint
-npm run build
-```
-
-Recommended route smoke checks:
-
-```bash
-curl -I http://localhost:3000/
-curl -I http://localhost:3000/analyze
-curl -I http://localhost:3000/results
-curl -I http://localhost:3000/graph
-curl -I http://localhost:3000/ingestion
-curl -I http://localhost:3000/report
-```
-
-## Deployment Notes
-
-ULIS AI is a static-friendly prototype and can be deployed to any platform that supports Next.js. Before using it with real users, replace the local demo corpus and browser-session handling with an audited backend, consent flows, access controls, retention policies, and jurisdiction-specific legal review.
-
 ## License
 
 Apache License 2.0. See [LICENSE](LICENSE).
