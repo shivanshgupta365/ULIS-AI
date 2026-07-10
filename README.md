@@ -1,6 +1,6 @@
 # ULIS AI
 
-ULIS AI is a Structured Legal Intelligence Engine for legal awareness, research preparation, and privacy-aware case analysis. It helps users describe a legal situation, compare it with a structured case corpus, understand relevant law sections, identify evidence gaps, and generate a simple preparation brief with MultiLingual Voice and Text Support .
+ULIS AI is a Ultimate Legal Intelligence Systems for legal awareness, research preparation, and privacy-aware case analysis. It helps users describe a legal situation, compare it with a structured case corpus, understand relevant law sections, identify evidence gaps, and generate a simple preparation brief with MultiLingual Voice and Text Support .
 
 ULIS AI is rewarded as 5th Runner Up and Special Mention at AIBoomi StartUp Hackathon!
 
